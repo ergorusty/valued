@@ -3,6 +3,8 @@ name = "valued"
 description = "Describe your data in terms of basic data structures. Get serialization and other facilities for free"
 version = "0.1.0"
 edition = "2018"
+license = "ISC OR Apache-2.0"
+repository = "https://github.com/ergorusty/valued"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
