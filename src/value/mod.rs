@@ -1,6 +1,6 @@
+pub mod core;
 pub mod primitive;
 pub mod serialize;
 pub mod traits;
-pub mod value;
 
-pub use self::value::*;
+pub use self::core::{Dict, Map, Seq, Value, EMPTY};

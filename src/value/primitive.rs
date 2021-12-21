@@ -2,6 +2,7 @@ use bigdecimal::BigDecimal;
 use std::hash::Hash;
 
 #[derive(Debug, Clone, Hash, Eq, PartialEq)]
+#[non_exhaustive]
 pub enum Primitive {
     String(String),
     U64(u64),

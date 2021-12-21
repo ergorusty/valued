@@ -2,9 +2,10 @@ use giftwrap::Wrap;
 use linked_hash_map::LinkedHashMap as OrderedMap;
 use std::iter::empty;
 
-use crate::{value::primitive::Primitive, SerializeAs};
+use crate::{Primitive, SerializeAs};
 
 #[derive(Debug, Clone, Eq, PartialEq, Hash, Wrap)]
+#[non_exhaustive]
 pub enum Value {
     Primitive(Primitive),
     Seq(Vec<Value>),
@@ -48,6 +49,7 @@ pub fn Dict(list: impl IntoIterator<Item = (impl Into<String>, impl Into<Value>)
     )
 }
 
+#[allow(clippy::exhaustive_structs)]
 pub struct EMPTY;
 
 impl IntoIterator for EMPTY {
